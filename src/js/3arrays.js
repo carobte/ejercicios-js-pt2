@@ -127,7 +127,7 @@ console.groupEnd()
 
 console.groupCollapsed("Ejercicio 12")
 
-console.log(frutas[frutas.length - 1])
+console.log(numeros[numeros.length - 1])
 
 console.groupEnd()
 
