@@ -7,8 +7,8 @@ console.log("Arrays pt2")
 console.group("Ejercicio 1")
 
 let nombres = [
-    "carolina", 
-    "dario", 
+    "carolina",
+    "dario",
     "melisa",
     "julian",
     "myriam",
@@ -28,6 +28,13 @@ console.groupEnd()
 
 console.group("Ejercicio 3")
 
+let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+let suma = 0
+
+for (let i = 0; i < numeros.length; i++) {
+    suma = suma + numeros[i]
+}
+console.log(suma)
 console.groupEnd()
 
 
@@ -35,11 +42,30 @@ console.groupEnd()
 
 console.group("Ejercicio 4")
 
+let mascota = {
+    nombre: "Milu",
+    especie: "perro",
+    edad: "1 año",
+    color: "negro"
+}
+
+for (const propiedad in mascota) {
+    console.log(propiedad + ": " + mascota[propiedad])
+}
+
 console.groupEnd()
 
 // 5. Utilizar un bucle for...of para sumar todos los números de un array.
 
 console.group("Ejercicio 5")
+
+let suma2 = 0 // Declaro otra variable suma para que no se acumule con la anterior (3 ejercicio)
+
+for (const num of numeros) {
+    suma2 = suma2 + num
+}
+
+console.log(suma2)
 
 console.groupEnd()
 
@@ -47,11 +73,18 @@ console.groupEnd()
 
 console.group("Ejercicio 6")
 
+let arrayStrings = ["hola", "mundo", "riwi", "coders", "desarrollo", "software"]
+
+arrayStrings.forEach(string => console.log(string))
+
 console.groupEnd()
 
 // 7. Utilizar el método map() para obtener un nuevo array con cada elemento de un array de números multiplicado por 2.
 
 console.group("Ejercicio 7")
+
+let multiplicados = numeros.map(num => num * 2)
+console.log(multiplicados)
 
 console.groupEnd()
 
@@ -59,11 +92,16 @@ console.groupEnd()
 
 console.group("Ejercicio 8.")
 
+let pares = numeros.filter(num => num % 2 === 0)
+console.log(pares)
+
 console.groupEnd()
 
 // 9. Utilizar el método some() para comprobar si al menos uno de los elementos de un array de números es mayor que 10.
 
 console.group("Ejercicio 9.")
+
+console.log(`Al menos uno es mayor que 10?: ${numeros.some(num => num > 10)}`)
 
 console.groupEnd()
 
@@ -71,17 +109,24 @@ console.groupEnd()
 
 console.group("Ejercicio 10")
 
+console.log(`Todos son positivos?: ${numeros.every(num => num > 0)}`)
+
 console.groupEnd()
 
 // 11. Utilizar el método sort() para ordenar un array de números de menor a mayor.
 
 console.group("Ejercicio 11")
 
+let numerosOrdenar = [2, 4, 5, 23, 3, 31, 40, 1, 10]
+
+console.log(numerosOrdenar.sort((a, b) => a - b))
 console.groupEnd()
 
 // 12. Utilizar el método reverse() para invertir el orden de un array dado.
 
 console.group("Ejercicio 12")
+
+console.log(`El array de Strings con reverse(): ${arrayStrings.reverse()}`)
 
 console.groupEnd()
 
