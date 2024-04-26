@@ -45,8 +45,10 @@ console.group("Ejercicio 4")
 let mascota = {
     nombre: "Milu",
     especie: "perro",
-    edad: "1 año",
-    color: "negro"
+    edad: 1,
+    color: "negro",
+    esterilizada: false,
+
 }
 
 for (const propiedad in mascota) {
@@ -134,11 +136,25 @@ console.groupEnd()
 
 console.group("Ejercicio 13")
 
+function reversarArray(array) {
+    return array.toReversed()
+}
+console.log(`Array original: ${numerosOrdenar}`)
+console.log(`Función toReversed: ${reversarArray(numerosOrdenar)}`)
+
 console.groupEnd()
 
 // 14. Utilizar el método forEach() para calcular la suma de todos los elementos de un array de números.
 
 console.group("Ejercicio 14")
+
+let suma3 = 0
+
+numerosOrdenar.forEach(num => {
+    return suma3 = suma3 + num
+})
+
+console.log(suma3)
 
 console.groupEnd()
 
@@ -146,11 +162,47 @@ console.groupEnd()
 
 console.group("Ejercicio 15")
 
+let contador = 0
+
+for (const propiedad in mascota) {  
+    if (typeof mascota[propiedad] === "string"){
+        contador++
+    }
+}
+
+console.log(contador)
 console.groupEnd()
 
 // 16. Utilizar el método forEach() para imprimir en la consola todos los elementos de un array de objetos.
 
 console.group("Ejercicio 16")
+
+let arrayObjetos = [
+    {
+        nombre: "caro",
+        edad: 26,
+        clan: "Dell"
+    },
+    {
+        nombre: "santi",
+        edad: 26,
+        clan: "Dell"
+    },
+    {
+        nombre: "juan",
+        edad: 18,
+        clan: "Dell"
+    },{
+        nombre: "pablo",
+        edad: 20,
+        clan: "Dell"
+    }
+]
+
+arrayObjetos.forEach(objeto => {
+    console.log(objeto)
+    
+})
 
 console.groupEnd()
 
